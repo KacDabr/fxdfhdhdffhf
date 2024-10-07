@@ -1,0 +1,36 @@
+import javax.swing.table.TableStringConverter;
+
+public class Main {
+    public static void main(String[] args) {
+
+
+
+    }
+
+    interface OperacjaTekstowa {
+        String wykonaj(String tekst);
+        String cofnij(String tekst);
+    }
+
+    static abstract class OperacjaNaTekscie implements OperacjaTekstowa {
+        public abstract String nazwaOperacji();
+    }
+
+    public static class ZamienMaleNaDuze extends OperacjaNaTekscie {
+        public String wykonaj(String tekst) {
+            return tekst.toUpperCase();
+        }
+
+        public String cofnij(String tekst) {
+            return tekst.toLowerCase();
+        }
+
+        public String nazwaOperacji() {
+            
+        }
+
+
+    }
+
+
+}
