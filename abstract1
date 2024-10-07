@@ -1,0 +1,44 @@
+
+public class Main {
+    public static void main(String[] args) {
+
+        Zwierze pies = new Pies();
+        pies.wydajDzwiek();
+        pies.poruszajSie();
+
+        Zwierze kot = new Kot();
+        kot.wydajDzwiek();
+        kot.poruszajSie();
+    }
+
+    public interface Dzwiek {
+        public void wydajDzwiek();
+    }
+
+    static abstract class Zwierze implements Dzwiek {
+        public void wydajDzwiek() {
+            System.out.println("dzwiek");
+        }
+        public abstract void poruszajSie();
+    }
+
+    public static class Pies extends Zwierze {
+        public void wydajDzwiek() {
+            System.out.println("Hau Hau");
+        }
+
+        public void poruszajSie() {
+            System.out.println("Pies biega");
+        }
+    }
+
+    public static class Kot extends Zwierze {
+        public void wydajDzwiek() {
+            System.out.println("Miau Miau");
+        }
+
+        public void poruszajSie() {
+            System.out.println("Kot chodzi");
+        }
+    }
+}
