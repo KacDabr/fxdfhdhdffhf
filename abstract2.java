@@ -16,10 +16,6 @@ public class Main {
     }
 
     static abstract class KartaPlatnicza implements Platnosc {
-        public void wykonajPlatnosc(double kwota){
-            saldo -= kwota;
-            System.out.println("Platnosc" + kwota + " PLN zaakceptowana");
-        }
         double saldo;
 
         abstract void doladuj(double kwota);
